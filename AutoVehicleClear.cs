@@ -13,7 +13,7 @@ namespace LehGogh.AutoVehicleClearExtended
 {
 	public class AutoVehicleClear : RocketPlugin<AutoVehicleClearConfiguration>
 	{
-		public const string version = "v1.0.1";
+		public const string version = "v1.0.2";
         public static AutoVehicleClear Instance;
 
 		private AutoVehicleClearConfiguration config;

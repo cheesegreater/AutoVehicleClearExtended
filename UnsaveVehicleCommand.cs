@@ -4,7 +4,6 @@ using System.Linq;
 
 using Rocket.API;
 using Rocket.Unturned.Player;
-using Rocket.Unturned;
 using Rocket.Unturned.Chat;
 using Logger = Rocket.Core.Logging.Logger;
 
@@ -19,7 +18,7 @@ namespace LehGogh.AutoVehicleClearExtended
     {
         public AllowedCaller AllowedCaller => AllowedCaller.Player;
 
-        public string Name => "unsave_vehicle";
+        public string Name => "v_unsave";
 
         public string Help => "Allows the targeted vehicle to be automatically cleared.";
 
@@ -51,6 +50,7 @@ namespace LehGogh.AutoVehicleClearExtended
                         Logger.Log(String.Format("Player {0} (CSteamID {1}) unsaved vehicle with ID {2}",
                             player.DisplayName, player.CSteamID, vehicle.instanceID.ToString()));
                         AutoVehicleClear.Instance.Configuration.Instance.VehiclesToSave.Remove(vehicle.instanceID);
+                        AutoVehicleClear.Instance.Configuration.Save();
                         return;
                     }
                 }
@@ -62,7 +62,7 @@ namespace LehGogh.AutoVehicleClearExtended
         public static Transform Raycast(IRocketPlayer rocketPlayer)
         {
             UnturnedPlayer player = (UnturnedPlayer)rocketPlayer;
-            if (Physics.Raycast(player.Player.look.aim.position, player.Player.look.aim.forward, out RaycastHit hit, float.MaxValue, RayMasks.BLOCK_VEHICLE))
+            if (Physics.Raycast(player.Player.look.aim.position, player.Player.look.aim.forward, out RaycastHit hit, float.MaxValue, RayMasks.BARRICADE_INTERACT))
             {
                 Transform transform = hit.transform;
                 return transform;

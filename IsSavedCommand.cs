@@ -17,7 +17,7 @@ namespace LehGogh.AutoVehicleClearExtended
     {
         public AllowedCaller AllowedCaller => AllowedCaller.Player;
 
-        public string Name => "is_saved";
+        public string Name => "v_check";
 
         public string Help => "Checks if the targeted vehicle is currently saved.";
 

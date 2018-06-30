@@ -5,15 +5,15 @@ Installation is simple, just download the DLL and move it to your Server's `/Roc
 
 ## Commands
 
-`/save_vehicle` - Prevents the targeted vehicle from being automatically cleared.
+`/v_save` - Prevents the targeted vehicle from being automatically cleared.
 - Requires permission `autovehicleclear.can_save_unsave_vehicles`
 - Vehicles are targeted via line-of-sight
 
-`/unsave_vehicle` - Allows the targeted vehicle to be automatically cleared.
+`/v_unsave` - Allows the targeted vehicle to be automatically cleared.
 - Requires permission `autovehicleclear.can_save_unsave_vehicles`
 - Vehicles are targeted via line-of-sight
 
-`/is_saved` - Checks if the targeted vehicle is currently saved.
+`/v_check` - Checks if the targeted vehicle is currently saved.
 - Requires permission `autovehicleclear.can_save_unsave_vehicles`
 - Vehicles are targeted via line-of-sight
 
@@ -30,4 +30,4 @@ The config contains seven values:
 - `ClearExploded` - True by default, clears vehicle corpses.  
 - `ClearDrowned` - True by default, clears underwater vehicles that do not have a Bouyancy object (will not clear vehicles like boats, seaplanes, amphibious cars, etc)  
 - `ClearNoTires` - True by default, clears vehicles that have tires in a healthy state but no longer have tires.
-- `VehiclesToSave` - A list of vehicle instance IDs to save (prevent from behing auto-cleared). You shouldn't normally set IDs manually, but by using the `/save_vehicle` and `/unsave_vehicle` commands.
+- `VehiclesToSave` - A list of vehicle instance IDs to save (prevent from behing auto-cleared). You shouldn't normally set IDs manually, but by using the `/v_save` and `/v_unsave` commands.

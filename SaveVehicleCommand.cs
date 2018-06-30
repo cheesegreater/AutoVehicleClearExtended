@@ -18,7 +18,7 @@ namespace LehGogh.AutoVehicleClearExtended
     {
         public AllowedCaller AllowedCaller => AllowedCaller.Player;
 
-        public string Name => "save_vehicle";
+        public string Name => "v_save";
 
         public string Help => "Prevents the targeted vehicle from being automatically cleared.";
 
@@ -50,6 +50,7 @@ namespace LehGogh.AutoVehicleClearExtended
                         Logger.Log(String.Format("Player {0} (CSteamID {1}) saved vehicle with ID {2}",
                             player.DisplayName, player.CSteamID, vehicle.instanceID.ToString()));
                         AutoVehicleClear.Instance.Configuration.Instance.VehiclesToSave.Add(vehicle.instanceID);
+                        AutoVehicleClear.Instance.Configuration.Save();
                         return;
                     }
                 }
