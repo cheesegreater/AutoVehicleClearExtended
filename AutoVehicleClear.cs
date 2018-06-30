@@ -13,7 +13,7 @@ namespace LehGogh.AutoVehicleClearExtended
 {
 	public class AutoVehicleClear : RocketPlugin<AutoVehicleClearConfiguration>
 	{
-		public const string version = "v1.0.2";
+		public const string version = "v1.0.3";
         public static AutoVehicleClear Instance;
 
 		private AutoVehicleClearConfiguration config;
@@ -56,7 +56,7 @@ namespace LehGogh.AutoVehicleClearExtended
 			Logger.Log($"Cleared {cleared} vehicles!");
 			if (config.SendClearMessage && cleared > 0)
 			{
-				UnturnedChat.Say(Translate("autovehicleclear_cleared_vehicles", cleared), Color.green);
+				UnturnedChat.Say(Translate("cleared_vehicles", cleared), Color.green);
 			}
 		}
 
