@@ -62,7 +62,7 @@ namespace LehGogh.AutoVehicleClearExtended
         public static Transform Raycast(IRocketPlayer rocketPlayer)
         {
             UnturnedPlayer player = (UnturnedPlayer)rocketPlayer;
-            if (Physics.Raycast(player.Player.look.aim.position, player.Player.look.aim.forward, out RaycastHit hit, float.MaxValue, RayMasks.BARRICADE_INTERACT))
+            if (Physics.Raycast(player.Player.look.aim.position, player.Player.look.aim.forward, out RaycastHit hit, float.MaxValue, RayMasks.BLOCK_VEHICLE))
             {
                 Transform transform = hit.transform;
                 return transform;

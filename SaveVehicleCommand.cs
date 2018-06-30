@@ -39,7 +39,7 @@ namespace LehGogh.AutoVehicleClearExtended
                 InteractableVehicle vehicle = raycast.GetComponent<InteractableVehicle>();
                 if (vehicle != null)
                 {
-                    if (!AutoVehicleClear.Instance.Configuration.Instance.VehiclesToSave.Contains(vehicle.instanceID))
+                    if (AutoVehicleClear.Instance.Configuration.Instance.VehiclesToSave.Contains(vehicle.instanceID))
                     {
                         UnturnedChat.Say(player, AutoVehicleClear.Instance.Translate("vehicle_already_saved"));
                         return;

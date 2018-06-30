@@ -13,7 +13,7 @@ namespace LehGogh.AutoVehicleClearExtended
 {
 	public class AutoVehicleClear : RocketPlugin<AutoVehicleClearConfiguration>
 	{
-		public const string version = "v1.1";
+		public const string version = "v1.0.1";
         public static AutoVehicleClear Instance;
 
 		private AutoVehicleClearConfiguration config;
@@ -45,8 +45,11 @@ namespace LehGogh.AutoVehicleClearExtended
 				var vehicle = vehicles[i];
 				if (CanClearVehicle(vehicle))
 				{
-					VehicleManager.instance.channel.send("tellVehicleDestroy", ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, vehicle.instanceID);
-					cleared++;
+                    if (!this.config.VehiclesToSave.Contains(vehicles[i].instanceID))
+                    {
+                        VehicleManager.instance.channel.send("tellVehicleDestroy", ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, vehicle.instanceID);
+                        cleared++;
+                    }
 				}
 			}
 
