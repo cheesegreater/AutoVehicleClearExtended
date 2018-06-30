@@ -1,7 +1,7 @@
 # AutoVehicleClearExtended
 Based on PhaserArray's AutoVehicleClear, but now with more features!
 
-Installation is simple, just download the DLL and move it to your Server's `/Rocket/Plugins` directory. Upon starting the server, a default config wil be generated.
+Installation is simple, just [download the DLL](https://github.com/lehgogh/AutoVehicleClearExtended/releases/latest) and move it to your Server's `/Rocket/Plugins` directory. Upon starting the server, a default config wil be generated.
 
 ## Commands
 
