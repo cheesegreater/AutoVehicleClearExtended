@@ -24,10 +24,10 @@ This plugin only has one permission: `autovehicleclear.can_save_unsave_vehicles`
 ## Configuration
 
 The config contains seven values:  
-`ClearInterval` - 600 by default, seconds between vehicle clears.  
-`SendClearMessage` - True by default, if false, a clear message will not be broadcasted.  
-`ClearAll` - False by default, if true, all empty vehicles will be cleared, enabling this overrides the three options below. NOT RECOMMENDED as there is currently no warning for players to get in vehicles they do not want to lose.  
-`ClearExploded` - True by default, clears vehicle corpses.  
-`ClearDrowned` - True by default, clears underwater vehicles that do not have a Bouyancy object (will not clear vehicles like boats, seaplanes, amphibious cars, etc)  
-`ClearNoTires` - True by default, clears vehicles that have tires in a healthy state but no longer have tires.
-`VehiclesToSave` - A list of vehicle instance IDs to save (prevent from behing auto-cleared). You shouldn't normally set IDs manually, but by using the `/save_vehicle` and `/unsave_vehicle` commands.
+- `ClearInterval` - 600 by default, seconds between vehicle clears.  
+- `SendClearMessage` - True by default, if false, a clear message will not be broadcasted.  
+- `ClearAll` - False by default, if true, all empty vehicles will be cleared, enabling this overrides the three options below. NOT RECOMMENDED as there is currently no warning for players to get in vehicles they do not want to lose.  
+- `ClearExploded` - True by default, clears vehicle corpses.  
+- `ClearDrowned` - True by default, clears underwater vehicles that do not have a Bouyancy object (will not clear vehicles like boats, seaplanes, amphibious cars, etc)  
+- `ClearNoTires` - True by default, clears vehicles that have tires in a healthy state but no longer have tires.
+- `VehiclesToSave` - A list of vehicle instance IDs to save (prevent from behing auto-cleared). You shouldn't normally set IDs manually, but by using the `/save_vehicle` and `/unsave_vehicle` commands.
